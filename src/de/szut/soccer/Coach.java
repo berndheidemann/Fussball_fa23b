@@ -1,19 +1,15 @@
 package de.szut.soccer;
 
-public class Coach {
+public class Coach extends Person {
 
-    private String name;
-    private int age;
     private int experience;
 
     // Standardkonstruktor
     // der hier macht gar nix
-    public Coach() {
-    }
 
     public Coach(String name, int age, int experience) {
-        this.name = name;
-        this.age = age;
+        // Aufruf des Konstruktors von Person
+        super(name, age);
         this.experience = experience;
     }
 
@@ -24,8 +20,6 @@ public class Coach {
                 "\nage: " + this.age +
                 "\nexperience: " + this.experience;
     }
-
-
 
 
 }

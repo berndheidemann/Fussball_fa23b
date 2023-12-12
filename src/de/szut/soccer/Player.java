@@ -2,14 +2,13 @@ package de.szut.soccer;
 
 import java.util.Random;
 
-public class Player {
+public class Player extends Person {
 
-    private String name;
-    private int age;
-    private int force;
-    private int powerAtGoalKick;
-    private int motivation;
-    private int numberOfGoals;
+
+    protected int force;
+    protected int powerAtGoalKick;
+    protected int motivation;
+    protected int numberOfGoals;
 
     public Player(
             String name,
@@ -19,11 +18,11 @@ public class Player {
             int motivation,
             int numberOfGoals
     ) {
-        this.name = name;
-        this.age = age;
-        this.force = force;
-        this.powerAtGoalKick = powerAtGoalKick;
-        this.motivation = motivation;
+        super(name, age);
+
+        this.force = validate(force);
+        this.powerAtGoalKick = validate(powerAtGoalKick);
+        this.motivation = validate(motivation);
         this.numberOfGoals = numberOfGoals;
     }
 
@@ -55,7 +54,7 @@ public class Player {
         return validate(currentPowerAtGoalKick);
     }
 
-    private int validate(int number) {
+    protected int validate(int number) {
         if (number > 10) {
             return 10;
         }
