@@ -19,6 +19,7 @@ public class Goalkeeper extends Player {
         this.reaction = validate(reaction);
     }
 
+
     @Override
     public String toString() {
         return "\nGoalkeeper\n" +

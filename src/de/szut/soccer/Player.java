@@ -26,6 +26,9 @@ public class Player extends Person {
         this.numberOfGoals = numberOfGoals;
     }
 
+    public int getMotivation() {
+        return motivation;
+    }
 
     @Override
     public String toString() {
@@ -62,5 +65,9 @@ public class Player extends Person {
             return 1;
         }
         return number;
+    }
+
+    public int getForce() {
+        return this.force;
     }
 }
