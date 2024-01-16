@@ -4,13 +4,16 @@ public class Coach extends Person {
 
     private int experience;
 
-    // Standardkonstruktor
-    // der hier macht gar nix
-
     public Coach(String name, int age, int experience) {
         // Aufruf des Konstruktors von Person
         super(name, age);
         this.experience = experience;
+    }
+// Standardkonstruktor
+    // der hier macht gar nix
+
+    public int getExperience() {
+        return experience;
     }
 
     @Override

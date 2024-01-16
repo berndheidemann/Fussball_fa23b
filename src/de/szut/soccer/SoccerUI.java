@@ -36,10 +36,8 @@ public class SoccerUI {
 
 
         Game game = new Game(dortmund, werder);
-        game.increaseAwayGoals();
-        game.increaseHomeGoals();
-        game.increaseHomeGoals();
+        Gameplay gameplay = new Gameplay(game);
+        gameplay.play();
 
-        System.out.println(game.getScore());
     }
 }

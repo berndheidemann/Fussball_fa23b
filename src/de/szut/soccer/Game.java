@@ -14,11 +14,11 @@ public class Game {
         this.away = away;
     }
 
-    public void increaseHomeGoals() {
+    private void increaseHomeGoals() {
         this.homeGoals++;
     }
 
-    public void increaseAwayGoals() {
+    private void increaseAwayGoals() {
         this.awayGoals++;
     }
 
@@ -36,4 +36,19 @@ public class Game {
         return joined.toString();
     }
 
+    public void goalScored(Team team) {
+        if (home == team) {
+            increaseHomeGoals();
+        } else {
+            increaseAwayGoals();
+        }
+    }
+
+    public Team getHome() {
+        return this.home;
+    }
+
+    public Team getAway() {
+        return away;
+    }
 }

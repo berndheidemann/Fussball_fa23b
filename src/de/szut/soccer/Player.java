@@ -26,6 +26,15 @@ public class Player extends Person {
         this.numberOfGoals = numberOfGoals;
     }
 
+    public int getNumberOfGoals() {
+        return numberOfGoals;
+    }
+
+    public void goalScored() {
+        this.numberOfGoals++;
+    }
+
+
     public int getMotivation() {
         return motivation;
     }

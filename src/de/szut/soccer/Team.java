@@ -1,6 +1,7 @@
 package de.szut.soccer;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.StringJoiner;
 
 public class Team {
@@ -12,6 +13,7 @@ public class Team {
     // Arraylist gefüllt mit Player-Objekten
     // Deklaration
     private ArrayList<Player> squad;
+
     public Team(String name, Coach coach, Goalkeeper goalkeeper) {
         this.name = name;
         this.coach = coach;
@@ -66,5 +68,18 @@ public class Team {
             response.add("Spieler: " + player.getName());
         }
         return response.toString();
+    }
+
+    public Coach getCoach() {
+        return this.coach;
+    }
+
+    public Player getRandomPlayer() {
+        Random rnd = new Random();
+        return this.squad.get(rnd.nextInt(this.squad.size()));
+    }
+
+    public Goalkeeper getGoalkeeper() {
+        return this.goalkeeper;
     }
 }
